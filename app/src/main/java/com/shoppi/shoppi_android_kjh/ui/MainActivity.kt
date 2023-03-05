@@ -1,10 +1,11 @@
-package com.shoppi.shoppi_android_kjh
+package com.shoppi.shoppi_android_kjh.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.shoppi.shoppi_android_kjh.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

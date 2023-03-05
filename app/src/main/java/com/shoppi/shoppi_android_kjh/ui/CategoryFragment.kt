@@ -1,10 +1,11 @@
-package com.shoppi.shoppi_android_kjh
+package com.shoppi.shoppi_android_kjh.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.shoppi.shoppi_android_kjh.R
 
 class CategoryFragment : Fragment() {
 
