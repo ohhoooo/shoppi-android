@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.shoppi.shoppi_android_kjh.ui.HomeFragment"
+        android:name="com.shoppi.shoppi_android_kjh.ui.home.HomeFragment"
         android:label="HomeFragment" >
         <action
             android:id="@+id/action_home_to_product_Detail"

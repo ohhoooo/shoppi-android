@@ -1,4 +1,4 @@
-package com.shoppi.shoppi_android_kjh
+package com.shoppi.shoppi_android_kjh.model
 
 import com.google.gson.annotations.SerializedName
 
