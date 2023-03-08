@@ -3,13 +3,12 @@ package com.shoppi.shoppi_android_kjh.ui.common
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.viewmodel.CreationExtras
 import com.shoppi.shoppi_android_kjh.AssetLoader
 import com.shoppi.shoppi_android_kjh.network.ApiClient
-import com.shoppi.shoppi_android_kjh.repository.CategoryRemoteDataSource
-import com.shoppi.shoppi_android_kjh.repository.CategoryRepository
-import com.shoppi.shoppi_android_kjh.repository.HomeAssetDataSource
-import com.shoppi.shoppi_android_kjh.repository.HomeRepository
+import com.shoppi.shoppi_android_kjh.repository.category.CategoryRemoteDataSource
+import com.shoppi.shoppi_android_kjh.repository.category.CategoryRepository
+import com.shoppi.shoppi_android_kjh.repository.home.HomeAssetDataSource
+import com.shoppi.shoppi_android_kjh.repository.home.HomeRepository
 import com.shoppi.shoppi_android_kjh.ui.category.CategoryViewModel
 import com.shoppi.shoppi_android_kjh.ui.home.HomeViewModel
 

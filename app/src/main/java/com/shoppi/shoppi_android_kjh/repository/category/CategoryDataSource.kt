@@ -1,4 +1,4 @@
-package com.shoppi.shoppi_android_kjh.repository
+package com.shoppi.shoppi_android_kjh.repository.category
 
 import com.shoppi.shoppi_android_kjh.model.Category
 

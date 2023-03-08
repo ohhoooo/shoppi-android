@@ -1,4 +1,4 @@
-package com.shoppi.shoppi_android_kjh.repository
+package com.shoppi.shoppi_android_kjh.repository.home
 
 import com.google.gson.Gson
 import com.shoppi.shoppi_android_kjh.AssetLoader
