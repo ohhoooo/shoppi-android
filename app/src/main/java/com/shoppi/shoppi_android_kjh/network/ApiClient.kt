@@ -1,6 +1,7 @@
 package com.shoppi.shoppi_android_kjh.network
 
 import com.shoppi.shoppi_android_kjh.model.Category
+import com.shoppi.shoppi_android_kjh.model.CategoryDetail
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -11,6 +12,9 @@ interface ApiClient {
 
     @GET("categories.json")
     suspend fun getCategories(): List<Category>
+
+    @GET("fashion_female.json")
+    suspend fun getCategoryDetail(): CategoryDetail
 
     companion object {
 
