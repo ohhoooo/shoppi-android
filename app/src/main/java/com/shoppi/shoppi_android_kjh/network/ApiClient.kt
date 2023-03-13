@@ -2,11 +2,13 @@ package com.shoppi.shoppi_android_kjh.network
 
 import com.shoppi.shoppi_android_kjh.model.Category
 import com.shoppi.shoppi_android_kjh.model.CategoryDetail
+import com.shoppi.shoppi_android_kjh.model.Product
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 interface ApiClient {
 
@@ -15,6 +17,9 @@ interface ApiClient {
 
     @GET("fashion_female.json")
     suspend fun getCategoryDetail(): CategoryDetail
+
+    @GET("products/{productId}.json")
+    suspend fun getProductDetail(@Path("productId") productId: String): Product
 
     companion object {
 
