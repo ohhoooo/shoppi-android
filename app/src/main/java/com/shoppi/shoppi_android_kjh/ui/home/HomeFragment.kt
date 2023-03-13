@@ -6,13 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.shoppi.shoppi_android_kjh.*
+import com.shoppi.shoppi_android_kjh.common.KEY_PRODUCT_ID
 import com.shoppi.shoppi_android_kjh.databinding.FragmentHomeBinding
+import com.shoppi.shoppi_android_kjh.ui.common.EventObserver
 import com.shoppi.shoppi_android_kjh.ui.common.ViewModelFactory
 
 class HomeFragment: Fragment() {
@@ -35,6 +39,7 @@ class HomeFragment: Fragment() {
         binding.lifecycleOwner = viewLifecycleOwner
         setToolbar()
         setTopBanners()
+        setNavigation()
     }
 
     private fun setToolbar() {
@@ -43,9 +48,17 @@ class HomeFragment: Fragment() {
         }
     }
 
+    private fun setNavigation() {
+        viewModel.openProductEvent.observe(viewLifecycleOwner, EventObserver { productId ->
+            findNavController().navigate(R.id.action_home_to_product_Detail, bundleOf(
+                KEY_PRODUCT_ID to productId
+            ))
+        })
+    }
+
     private fun setTopBanners() {
         with(binding.viewpagerHomeBanner) {
-            adapter = HomeBannerAdapter().apply {
+            adapter = HomeBannerAdapter(viewModel).apply {
                 viewModel.topBanners.observe(viewLifecycleOwner) { banners ->
                     submitList(banners)
                 }
