@@ -41,6 +41,18 @@ class CartAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         return cartProducts.size
     }
 
+    fun submitHeaderAndItemList(items: List<CartItem>) {
+        val itemGroups = items.groupBy { it.brandName }
+        val products = mutableListOf<CartProduct>()
+        itemGroups.entries.forEach { entry ->
+            val header = CartHeader(entry.key)
+            products.add(header)
+            products.addAll(entry.value)
+        }
+        cartProducts.addAll(products)
+        notifyItemRangeInserted(cartProducts.size, products.size)
+    }
+
     override fun getItemViewType(position: Int): Int {
         return when (cartProducts[position]) {
             is CartHeader -> VIEW_TYPE_HEADER
