@@ -1,4 +1,4 @@
-package com.shoppi.shoppi_android_kjh.ui
+package com.shoppi.shoppi_android_kjh.ui.cart
 
 import android.os.Bundle
 import android.view.LayoutInflater
